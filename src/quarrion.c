@@ -69,10 +69,8 @@ void lex(char* file_name, node* target) {
                 reserved_tokens_size
             );
 
-        if (isspace(current)) {
+        if (reserved || isspace(current)) {
             current       = fgetc(file); // go to next character
-        }
-        if (reserved) {
             target->token = buffer;
             target->next  = malloc(sizeof(node));
             target        = target->next;
@@ -83,7 +81,6 @@ void lex(char* file_name, node* target) {
         current = fgetc(file);
     } 
     target->next = NULL;
-
     fclose(file);
 }
 
