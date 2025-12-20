@@ -1,0 +1,11 @@
+SET my_int   123
+SET my_float -1.0
+
+SET true  (FUN x (FUN y x))
+SET false (FUN x (FUN y y))
+
+// main function
+// prints 123 to stdout
+SET main (FUN args (PUT my_int; 0))
+
+main [null]; // runs the main function
