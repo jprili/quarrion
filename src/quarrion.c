@@ -94,19 +94,3 @@ void _print_target(node* target) {
     _print_target(target->next);
 };
 
-/**
- * Drives the compilation.
- */
-int main(int argc, char* argv[]) {
-    if (argc <= 1) {
-        printf("Please provide a file name.");
-        return NO_ARGUMENTS;
-    }
-    char* file_name = argv[1];
-    node* tokens = malloc(sizeof(node));
-    tokens->next = NULL;
-    lex(file_name, tokens);
-
-    _print_target(tokens);
-    return EXIT_SUCCESS;
-}
