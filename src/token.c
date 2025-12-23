@@ -4,5 +4,5 @@
 struct token {
     token_type type;
     char**     lexeme;
-    value;
+    int value;
 };

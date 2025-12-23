@@ -6,7 +6,9 @@
  *
  */
 
-#include "stdio.h"
+#include <stdio.h>
+
+#include "quarrion.c"
 
 #define BUFFER_SIZE 256
 
@@ -21,7 +23,9 @@ int cli_read_into(char* target_buffer)
 };
 
 void cli_execute(char buffer_in[], char* buffer_out)
-{};
+{
+
+};
 
 void cli_print(char* buffer)
 {
